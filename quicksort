@@ -1,0 +1,12 @@
+def quicksort(arr):
+  if len(arr)<=1:
+    return arr
+  else:
+    base=arr[0]
+    less=[i for i in arr[1:] if i <= base]
+    more=[i for i in arr[1:] if i > base]
+    return quicksort(less) + [base] + quicksort(more)
+    
+    
+print(quicksort([10,2,5,9,20]))
+  
