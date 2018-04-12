@@ -1,0 +1,13 @@
+def exe(n,base):
+    convert='0123456789ABCDEF'
+    if n<base:
+        return convert[n]
+    else:
+        x=exe(n//base,base)+convert[n%base]
+        return x
+
+print(exe(6,2))  //将数字6表示为2进制的形式
+
+a='6'
+b='7'
+print(a+b)  //这样得到的是字符串的直接连接到一块
